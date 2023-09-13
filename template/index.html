@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<!---->>
+{% block title %} หน้ารก {% endblock title %}
+<!---->>
+{% block content %} 
+
+{% for item in regis %}
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{item.date}}</h6>
+      <p class="card-text">{{ item.detail }}</p>
+      {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
+      <a href="#" class="card-link">{{item.by}}</a>
+    </div>
+  </div>
+{% endfor %}
+
+
+
+{% endblock content %}
