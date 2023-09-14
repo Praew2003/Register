@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_dump_load_utf8',
+    
     'regis'
 ]
 
@@ -76,10 +78,18 @@ WSGI_APPLICATION = 'register.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '&egNcui6%i%7CnE',
+        'HOST': 'db.tvbxauobxjtpkkitarol.supabase.co',
+        'PORT': '',
     }
 }
+
+
 
 
 # Password validation
