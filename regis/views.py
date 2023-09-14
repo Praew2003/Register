@@ -5,8 +5,8 @@ from . import models
 
 def home(request):
     context = {}
-    # course = models.Course.objects.all()
-    # context['courses'] = course
+    course = models.Course.objects.all()
+    context['courses'] = course
     
     return render(request,'index.html', context)
 
